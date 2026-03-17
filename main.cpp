@@ -10,22 +10,32 @@ int main()
     double scholarship = 10000.0;
 
     // TODO
-
+    cout << "Enter status: " << endl;
+    cin >> status;
+    cout << "Enter gender: " << endl;
+    cin >> gender;
+    cout << "Enter major: " << endl;
+    cin >> major;
     // TODO
-        // TODO
-            // TODO
-                // TODO
-                // TODO
-            // TODO
-                // TODO
-                // TODO
-        // TODO
-            // TODO
+    if (status == "student") {
+        factor = 0.2;
+        if(gender == "female") {
+            factor = 1.0;
+            if(major =="cs")
+            factor = 3.0;
+        } else {
+            if(major =="cs")
+            factor = 2.0;
+        }
+    } else {
+        if(major =="cs")
+        factor = 0.5;
+    }
+        double finalScholarship = scholarship * factor;
 
-    // TODO
 
     cout << setprecision(2) << fixed;
-    // TODO
+    cout << "Scholarship: " << finalScholarship << endl;
 
     return 0;
 }
